@@ -4,6 +4,16 @@
    BUTTONS
    ========================================================= */
 
+/* All clickable buttons */
+button {
+    cursor: pointer;
+}
+
+/* Disabled buttons */
+button:disabled {
+    cursor: not-allowed;
+}
+
 .btn-primary {
     @apply rounded-md bg-primary px-4 py-2 font-medium text-white transition;
 }
@@ -309,12 +319,17 @@
 }
 
 
-/* ---------------------------------------------------------
-   HOVER CARD
-   --------------------------------------------------------- */
+/* =========================================================
+   HOVER CARD - DARK MODE
+   ========================================================= */
+
+.hover-card {
+    transition: background-color 0.2s ease;
+}
 
 .dark-mode .hover-card {
     background-color: #374151;
+    color: #f9fafb;
 }
 
 .dark-mode .hover-card:hover {
