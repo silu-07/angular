@@ -1,0 +1,29 @@
+/* //colors, fonts, design tokens  */
+
+@theme {
+    /* Colors */
+    --color-primary: #1976d2;
+    --color-primary-dark: #115293;
+    --color-primary-light: #63a4ff;
+
+    --color-secondary: #424242;
+    --color-success: #16a34a;
+    --color-warning: #f59e0b;
+    --color-danger: #dc2626;
+    --color-info: #0284c7;
+
+    --color-background: #f5f5f5;
+    --color-surface: #ffffff;
+
+    /* Typography */
+    --font-display: "Inter", sans-serif;
+
+    /* Custom breakpoints */
+    --breakpoint-3xl: 120rem;
+
+    /* Border radius */
+    --radius-card: 0.75rem;
+
+    /* Shadows */
+    --shadow-card: 0 2px 8px rgb(0 0 0 / 0.1);
+}
