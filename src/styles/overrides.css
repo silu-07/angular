@@ -1,0 +1,14 @@
+/* Angular Material / AG Grid / third-party overrides */
+
+.mat-mdc-button {
+    font-family: inherit;
+}
+
+.mat-mdc-form-field {
+    width: 100%;
+}
+
+.ag-theme-custom {
+    --ag-font-family: "Inter", sans-serif;
+    --ag-font-size: 14px;
+}

@@ -1,0 +1,436 @@
+<div class="min-h-screen bg-gray-100 p-4 md:p-8">
+
+    <!-- Header -->
+    <header class="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+            <h1 class="text-2xl font-bold text-secondary md:text-3xl">
+                Tailwind UI Test
+            </h1>
+
+            <p class="mt-1 text-gray-600">
+                Angular + Tailwind CSS v4
+            </p>
+        </div>
+
+        <div class="flex gap-2">
+            <button class="btn-primary">
+                Add User
+            </button>
+
+            <button class="btn-outline">
+                Export
+            </button>
+        </div>
+    </header>
+
+
+    <!-- Custom utilities -->
+    <section class="mb-6">
+        <div class="card">
+
+            <div class="card-header">
+                <h2 class="text-lg font-semibold">
+                    Custom Utilities
+                </h2>
+
+                <span class="badge badge-success">
+                    Active
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+
+                <div class="rounded-lg bg-blue-50 p-4">
+                    <p class="text-sm text-gray-500">Flex Center</p>
+
+                    <div class="flex items-center justify-center h-20 rounded bg-white">
+                        <span class="font-semibold text-primary">
+                            Centered
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="rounded-lg bg-green-50 p-4">
+                    <p class="text-sm text-gray-500">Truncate 1</p>
+
+                    <p class="truncate-1 mt-3">
+                        This is a very long text which should be truncated into a single line when the container width
+                        is limited.
+                    </p>
+                </div>
+
+
+                <div class="rounded-lg bg-yellow-50 p-4">
+                    <p class="text-sm text-gray-500">Truncate 2</p>
+
+                    <p class="truncate-2 mt-3">
+                        This is a long text that should be displayed for a maximum of two lines using our custom
+                        Tailwind utility.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Buttons -->
+    <section class="mb-6">
+        <div class="card">
+
+            <div class="card-header">
+                <h2 class="text-lg font-semibold">
+                    Buttons
+                </h2>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+
+                <button class="btn-primary">
+                    Primary
+                </button>
+
+                <button class="btn-secondary">
+                    Secondary
+                </button>
+
+                <button class="btn-success">
+                    Success
+                </button>
+
+                <button class="btn-danger">
+                    Delete
+                </button>
+
+                <button class="btn-outline">
+                    Outline
+                </button>
+
+                <button class="rounded-md bg-gray-300 px-4 py-2 text-gray-500" disabled>
+                    Disabled
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Form -->
+    <section class="mb-6">
+        <div class="card">
+
+            <div class="card-header">
+                <h2 class="text-lg font-semibold">
+                    User Form
+                </h2>
+
+                <span class="badge badge-info">
+                    Form
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+                <div>
+                    <label class="form-label">
+                        First Name
+                    </label>
+
+                    <input type="text" class="form-input" placeholder="Enter first name">
+                </div>
+
+
+                <div>
+                    <label class="form-label">
+                        Last Name
+                    </label>
+
+                    <input type="text" class="form-input" placeholder="Enter last name">
+                </div>
+
+
+                <div>
+                    <label class="form-label">
+                        Email
+                    </label>
+
+                    <input type="email" class="form-input" placeholder="Enter email">
+                </div>
+
+
+                <div>
+                    <label class="form-label">
+                        Role
+                    </label>
+
+                    <select class="form-input">
+                        <option>Select Role</option>
+                        <option>Admin</option>
+                        <option>Developer</option>
+                        <option>Manager</option>
+                    </select>
+                </div>
+
+
+                <div class="md:col-span-2">
+                    <label class="form-label">
+                        Description
+                    </label>
+
+                    <textarea rows="4" class="form-input" placeholder="Enter description">
+          </textarea>
+                </div>
+
+            </div>
+
+            <div class="mt-6 flex justify-end gap-3">
+                <button class="btn-outline">
+                    Cancel
+                </button>
+
+                <button class="btn-primary">
+                    Save User
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Status badges -->
+    <section class="mb-6">
+        <div class="card">
+
+            <div class="card-header">
+                <h2 class="text-lg font-semibold">
+                    Status
+                </h2>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+
+                <span class="badge badge-success">
+                    Success
+                </span>
+
+                <span class="badge badge-warning">
+                    Pending
+                </span>
+
+                <span class="badge badge-danger">
+                    Failed
+                </span>
+
+                <span class="badge badge-info">
+                    Information
+                </span>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Responsive cards -->
+    <section class="mb-6">
+
+        <h2 class="mb-4 text-xl font-semibold">
+            Responsive Grid
+        </h2>
+
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+            <div class="card">
+                <h3 class="font-semibold">Users</h3>
+                <p class="mt-2 text-3xl font-bold text-primary">1,250</p>
+                <p class="mt-1 text-sm text-gray-500">
+                    Total users
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 class="font-semibold">Orders</h3>
+                <p class="mt-2 text-3xl font-bold text-success">856</p>
+                <p class="mt-1 text-sm text-gray-500">
+                    Completed orders
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 class="font-semibold">Pending</h3>
+                <p class="mt-2 text-3xl font-bold text-warning">42</p>
+                <p class="mt-1 text-sm text-gray-500">
+                    Pending requests
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Table -->
+    <section class="mb-6">
+        <div class="card">
+
+            <div class="card-header">
+                <h2 class="text-lg font-semibold">
+                    Users
+                </h2>
+
+                <button class="btn-primary">
+                    Add
+                </button>
+            </div>
+
+            <div class="table-container">
+
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Abinash</td>
+                            <td>abinash@example.com</td>
+                            <td>Developer</td>
+                            <td>
+                                <span class="badge badge-success">
+                                    Active
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Rahul</td>
+                            <td>rahul@example.com</td>
+                            <td>Manager</td>
+                            <td>
+                                <span class="badge badge-warning">
+                                    Pending
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Priya</td>
+                            <td>priya@example.com</td>
+                            <td>Admin</td>
+                            <td>
+                                <span class="badge badge-danger">
+                                    Inactive
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Hover / Focus -->
+    <section class="mb-6">
+        <div class="card">
+
+            <h2 class="mb-4 text-lg font-semibold">
+                Tailwind Variants
+            </h2>
+
+            <div class="flex flex-col gap-4 md:flex-row">
+
+                <button class="rounded-md bg-primary px-4 py-2 text-white transition hover:bg-primary-dark">
+                    Hover Me
+                </button>
+
+                <input
+                    class="rounded-md border border-gray-300 px-3 py-2 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    placeholder="Focus me">
+
+                <div class="clickable rounded-md bg-gray-100 p-3 transition hover:bg-gray-200">
+                    Hover Card
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Dark mode test -->
+    <section class="mb-6">
+
+        <div class="rounded-lg bg-white p-6 shadow-md dark:bg-gray-900">
+
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+                Dark Mode
+            </h2>
+
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+                This section supports Tailwind dark mode.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Modal UI example -->
+    <section>
+
+        <div class="card">
+
+            <h2 class="mb-4 text-lg font-semibold">
+                Modal Classes
+            </h2>
+
+            <button class="btn-primary">
+                Open Modal
+            </button>
+
+            <!-- Uncomment to test modal -->
+
+            <!--
+      <div class="modal-backdrop"></div>
+
+      <div class="modal">
+
+        <h2 class="text-xl font-semibold">
+          Confirm Action
+        </h2>
+
+        <p class="mt-2 text-gray-600">
+          Are you sure you want to continue?
+        </p>
+
+        <div class="mt-6 flex justify-end gap-3">
+          <button class="btn-outline">
+            Cancel
+          </button>
+
+          <button class="btn-primary">
+            Confirm
+          </button>
+        </div>
+
+      </div>
+      -->
+
+        </div>
+
+    </section>
+
+</div>
