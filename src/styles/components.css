@@ -1,5 +1,9 @@
 /* Reusable UI Classes */
 
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
 .btn-primary {
     @apply rounded-md bg-primary px-4 py-2 font-medium text-white transition;
 }
@@ -9,7 +13,7 @@
 }
 
 .btn-secondary {
-    @apply rounded-md bg-secondary px-4 py-2 font-medium text-white transition;
+    @apply rounded-md bg-secondary px-4 py-2 font-medium text-white;
 }
 
 .btn-success {
@@ -24,12 +28,26 @@
     @apply rounded-md border border-primary px-4 py-2 font-medium text-primary;
 }
 
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
 .card {
     @apply rounded-card bg-surface p-4 shadow-card;
 }
 
 .card-header {
     @apply mb-4 flex items-center justify-between border-b pb-3;
+}
+
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+.form-label {
+    @apply mb-1 block text-sm font-medium text-gray-700;
 }
 
 .form-input {
@@ -40,25 +58,39 @@
     @apply border-primary ring-2 ring-primary/20;
 }
 
-.form-label {
-    @apply mb-1 block text-sm font-medium text-gray-700;
-}
-
-.form-label {
-    @apply mb-1 block text-sm font-medium text-gray-700;
-}
-
 .form-error {
     @apply mt-1 text-sm text-danger;
 }
 
-.modal-backdrop {
-    @apply fixed inset-0 z-40 bg-black/50;
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
 }
 
-.modal {
-    @apply fixed left-1/2 top-1/2 z-50 w-full max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-6 shadow-xl;
+.badge-success {
+    @apply bg-green-100 text-green-800;
 }
+
+.badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-danger {
+    @apply bg-red-100 text-red-800;
+}
+
+.badge-info {
+    @apply bg-blue-100 text-blue-800;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
 
 .table-container {
     @apply overflow-x-auto rounded-lg border;
@@ -78,4 +110,213 @@
 
 .table tbody tr:hover {
     @apply bg-gray-50;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal-backdrop {
+    @apply fixed inset-0 z-40 bg-black/50;
+}
+
+.modal {
+    @apply fixed left-1/2 top-1/2 z-50 w-full max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-6 shadow-xl;
+}
+
+
+/* =========================================================
+   THEME TOGGLE
+   ========================================================= */
+
+.theme-toggle {
+    @apply rounded-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-800 shadow-sm transition;
+}
+
+.theme-toggle:hover {
+    @apply bg-gray-100;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+/*
+  One class controls the entire theme:
+
+  <div class="dark-mode">
+*/
+
+.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+
+/* ---------------------------------------------------------
+   TEXT COLORS
+   --------------------------------------------------------- */
+
+.dark-mode .text-secondary {
+    color: #ffffff;
+}
+
+.dark-mode .text-primary {
+    color: #60a5fa;
+}
+
+.dark-mode .text-success {
+    color: #4ade80;
+}
+
+.dark-mode .text-warning {
+    color: #fbbf24;
+}
+
+.dark-mode .text-danger {
+    color: #f87171;
+}
+
+.dark-mode .text-gray-500 {
+    color: #9ca3af;
+}
+
+.dark-mode .text-gray-600 {
+    color: #d1d5db;
+}
+
+.dark-mode .text-gray-700 {
+    color: #e5e7eb;
+}
+
+.dark-mode .text-gray-800 {
+    color: #f3f4f6;
+}
+
+
+/* ---------------------------------------------------------
+   CARDS
+   --------------------------------------------------------- */
+
+.dark-mode .card {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+.dark-mode .card-header {
+    border-color: #374151;
+}
+
+
+/* ---------------------------------------------------------
+   FORMS
+   --------------------------------------------------------- */
+
+.dark-mode .form-label {
+    color: #e5e7eb;
+}
+
+.dark-mode .form-input {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #ffffff;
+}
+
+.dark-mode .form-input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* ---------------------------------------------------------
+   TABLE
+   --------------------------------------------------------- */
+
+.dark-mode .table {
+    color: #f9fafb;
+}
+
+.dark-mode .table th {
+    background-color: #374151;
+}
+
+.dark-mode .table td {
+    border-color: #4b5563;
+}
+
+.dark-mode .table tbody tr:hover {
+    background-color: #374151;
+}
+
+
+/* ---------------------------------------------------------
+   WHITE / GRAY BACKGROUNDS
+   --------------------------------------------------------- */
+
+.dark-mode .bg-white {
+    background-color: #374151;
+}
+
+.dark-mode .bg-gray-100 {
+    background-color: #1f2937;
+}
+
+.dark-mode .bg-gray-300 {
+    background-color: #4b5563;
+}
+
+
+/* ---------------------------------------------------------
+   DEMO COLORED BOXES
+   --------------------------------------------------------- */
+
+.dark-mode .bg-blue-50 {
+    background-color: #1e3a5f;
+}
+
+.dark-mode .bg-green-50 {
+    background-color: #163b2a;
+}
+
+.dark-mode .bg-yellow-50 {
+    background-color: #4a3b10;
+}
+
+
+/* ---------------------------------------------------------
+   THEME TOGGLE
+   --------------------------------------------------------- */
+
+.dark-mode .theme-toggle {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #ffffff;
+}
+
+.dark-mode .theme-toggle:hover {
+    background-color: #4b5563;
+}
+
+
+/* ---------------------------------------------------------
+   DISABLED BUTTON
+   --------------------------------------------------------- */
+
+.dark-mode button:disabled {
+    background-color: #4b5563;
+    color: #9ca3af;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER CARD
+   --------------------------------------------------------- */
+
+.dark-mode .hover-card {
+    background-color: #374151;
+}
+
+.dark-mode .hover-card:hover {
+    background-color: #4b5563;
 }
