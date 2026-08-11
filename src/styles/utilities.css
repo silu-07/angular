@@ -1,0 +1,57 @@
+/* custom utilities */
+
+@utility truncate-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@utility truncate-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+@utility truncate-3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+@utility scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@utility scrollbar-thin {
+    scrollbar-width: thin;
+}
+
+@utility center-screen {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+@utility text-balance {
+    text-wrap: balance;
+}
+
+@utility text-balance {
+    text-wrap: balance;
+}
+
+@utility no-select {
+    user-select: none;
+}
+
+@utility aspect-video-custom {
+    aspect-ratio: 16 / 9;
+}
