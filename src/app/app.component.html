@@ -1,1 +1,74 @@
-<app-parent></app-parent>
+<main [ngClass]="isDarkMode ? 'dark-theme' : 'light-theme'" class="theme-shell relative min-h-screen overflow-hidden text-white">
+  <div class="absolute inset-0 theme-bg"></div>
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,_rgba(255,255,255,0.06),_transparent_35%,_rgba(255,255,255,0.06))]"></div>
+
+  <div class="absolute right-4 top-4 z-30">
+    <button type="button" (click)="toggleTheme()" class="theme-toggle flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-current shadow-lg backdrop-blur-sm transition hover:scale-[1.02]">
+      <span>{{ isDarkMode ? '☀️' : '🌙' }}</span>
+      <span>{{ isDarkMode ? 'Light' : 'Dark' }}</span>
+    </button>
+  </div>
+
+  <div class="relative z-10 flex min-h-screen items-center justify-center px-4 py-12">
+    <div class="content-card w-full max-w-6xl rounded-[2rem] border p-6 shadow-[0_30px_80px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-10">
+      <div class="grid items-center gap-8 md:grid-cols-[1.2fr_0.8fr]">
+        <div class="text-left">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-amber-500/90">
+            Nostalgia Cinema
+          </p>
+
+          <h1 class="max-w-md text-5xl font-black uppercase leading-none tracking-tight md:text-7xl">
+            90s <span class="text-amber-500">Bollywood</span>
+          </h1>
+
+          <p class="mt-5 max-w-lg text-base md:text-lg">
+            A romantic sunrise, a village breeze, and the soundtrack of a million memories.
+          </p>
+
+          <div class="mt-8 flex items-center gap-4">
+            <button type="button" (click)="toggleMusic()" class="primary-btn rounded-full px-6 py-3 text-sm font-black uppercase tracking-[0.18em] shadow-[0_18px_38px_rgba(251,146,60,0.45)] transition hover:scale-[1.02]">
+              {{ isPlaying ? 'Pause' : 'Play Now' }}
+            </button>
+            <span class="text-sm uppercase tracking-[0.2em] opacity-80">Classic Hindi</span>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="poster-wrap relative h-72 w-72 rounded-[2rem] border border-white/10 p-5 shadow-[0_30px_70px_rgba(251,146,60,0.18)]">
+            <div class="absolute inset-5 rounded-[1.5rem] border border-white/10"></div>
+            <div class="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full border-[12px] border-amber-200/80 bg-[radial-gradient(circle,_#fef3c7_0%,_#fbbf24_28%,_#111827_29%,_#020617_100%)] shadow-[0_0_35px_rgba(251,191,36,0.3)]"></div>
+            <div class="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#111827] text-2xl font-black text-amber-300 shadow-inner shadow-amber-200/20">
+              90s
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute inset-x-0 bottom-0 z-20 px-4 pb-5">
+    <div class="player-card mx-auto flex max-w-4xl items-center justify-between gap-4 rounded-2xl border p-4 shadow-[0_20px_50px_rgba(0,0,0,0.25)] backdrop-blur-md">
+      <div class="flex min-w-0 items-center gap-3">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-amber-300 to-orange-500 font-bold text-slate-900">
+          90s
+        </div>
+        <div class="min-w-0">
+          <p class="truncate text-sm font-semibold">{{ currentTrack.title }}</p>
+          <p class="truncate text-xs opacity-75">{{ currentTrack.artist }}</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button type="button" class="control-btn flex h-10 w-10 items-center justify-center rounded-full text-lg transition hover:scale-[1.03]" (click)="prevTrack()" aria-label="Previous song">
+          ⏮
+        </button>
+        <button type="button" class="play-btn flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-orange-500 text-xl font-bold text-slate-900 shadow-lg shadow-orange-500/30" (click)="toggleMusic()" aria-label="Play or pause">
+          {{ isPlaying ? '⏸' : '▶' }}
+        </button>
+        <button type="button" class="control-btn flex h-10 w-10 items-center justify-center rounded-full text-lg transition hover:scale-[1.03]" (click)="nextTrack()" aria-label="Next song">
+          ⏭
+        </button>
+      </div>
+    </div>
+  </div>
+</main>

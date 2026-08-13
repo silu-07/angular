@@ -1,0 +1,144 @@
+:host {
+  display: block;
+}
+
+.theme-shell {
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.dark-theme {
+  color: #f8fafc;
+}
+
+.dark-theme .theme-bg {
+  background: radial-gradient(circle at top, rgba(251, 191, 36, 0.42), transparent 18%),
+    linear-gradient(135deg, #24070d 0%, #4b0d2d 30%, #1d2140 58%, #111827 100%);
+}
+
+.dark-theme .content-card,
+.dark-theme .player-card {
+  background: rgba(15, 23, 42, 0.66);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark-theme .poster-wrap {
+  background: radial-gradient(circle at 30% 30%, rgba(251, 191, 36, 0.45), transparent 22%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(76, 29, 149, 0.7));
+}
+
+.dark-theme .primary-btn {
+  background: #f59e0b;
+  color: #111827;
+  box-shadow: 0 14px 26px rgba(245, 158, 11, 0.28);
+}
+
+.dark-theme .content-card h1,
+.dark-theme .content-card p,
+.dark-theme .player-card p,
+.dark-theme .theme-toggle,
+.dark-theme .control-btn,
+.dark-theme .primary-btn,
+.dark-theme .play-btn {
+  color: inherit;
+}
+
+.dark-theme .theme-toggle,
+.dark-theme .control-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+
+.light-theme {
+  color: #111827;
+}
+
+.light-theme .theme-bg {
+  background: radial-gradient(circle at top, rgba(253, 224, 71, 0.5), transparent 22%),
+    linear-gradient(135deg, #fff7ed 0%, #e0f2fe 35%, #d9f99d 62%, #bbf7d0 100%);
+}
+
+.light-theme .content-card,
+.light-theme .player-card {
+  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+}
+
+.light-theme .poster-wrap {
+  background: radial-gradient(circle at 30% 30%, rgba(253, 224, 71, 0.4), transparent 20%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(191, 219, 254, 0.8));
+}
+
+.light-theme .primary-btn {
+  background: #f59e0b;
+  color: #fff;
+  box-shadow: 0 14px 26px rgba(245, 158, 11, 0.2);
+}
+
+.light-theme .theme-toggle,
+.light-theme .control-btn {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.08);
+  color: #111827;
+  box-shadow: none;
+}
+
+.light-theme .player-card {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.light-theme .content-card,
+.light-theme .player-card,
+.light-theme .theme-toggle,
+.light-theme .control-btn,
+.light-theme .primary-btn,
+.light-theme .play-btn {
+  color: #111827;
+}
+
+.light-theme .player-card p,
+.light-theme .content-card p,
+.light-theme .content-card span {
+  color: #1f2937;
+}
+
+.light-theme .text-amber-500,
+.light-theme .text-amber-400 {
+  color: #b45309 !important;
+}
+
+.theme-toggle,
+.control-btn {
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  border-radius: 999px;
+}
+
+.theme-toggle:hover,
+.control-btn:hover,
+.primary-btn:hover,
+.play-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+
+.primary-btn {
+  border: none;
+  letter-spacing: 0.18em;
+  min-width: 160px;
+  border-radius: 999px;
+}
+
+.play-btn {
+  border: none;
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+.primary-btn,
+.play-btn,
+.control-btn,
+.theme-toggle {
+  cursor: pointer;
+}
