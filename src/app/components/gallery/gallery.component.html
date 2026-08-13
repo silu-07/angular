@@ -1,0 +1,82 @@
+<section class="space-y-6">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-3">
+            <div
+                class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-pink-500 rounded-md flex items-center justify-center text-white font-semibold">
+                G</div>
+            <div>
+                <div class="text-sm font-medium">Featured</div>
+                <div class="text-xs text-gray-500 dark:text-gray-400">Selected works</div>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-3 w-full md:w-1/2">
+            <div class="relative flex-1">
+                <input [(ngModel)]="search" (ngModelChange)="applyFilter()" placeholder="Search photos or tags"
+                    class="w-full px-3 py-2 pr-10 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow" />
+                <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+                    <svg class="h-4 w-4 text-gray-400 dark:text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="relative w-40">
+                <select [(ngModel)]="selectedTag" (change)="applyFilter()"
+                    class="block w-full appearance-none px-3 py-2 pr-8 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="">All styles</option>
+                    <option *ngFor="let t of uniqueTags()" [value]="t">{{ t }}</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+                    <svg class="h-4 w-4 text-gray-500 dark:text-gray-300" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let p of filtered; let i = index" class="group cursor-pointer overflow-hidden rounded-lg shadow-lg"
+            (click)="open(p)">
+            <div class="relative">
+                <img [src]="p.src" [alt]="p.title"
+                    class="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+                <div class="absolute left-4 bottom-4 text-white">
+                    <div class="text-lg font-semibold">{{ p.title }}</div>
+                    <div class="text-sm text-gray-200">{{ p.location }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div *ngIf="showModal && selected" class="fixed inset-0 flex items-center justify-center z-50 p-4">
+        <div class="absolute inset-0 bg-black/60" (click)="close()"></div>
+        <div class="relative max-w-4xl w-full bg-white dark:bg-gray-900 rounded-md overflow-hidden shadow-2xl">
+            <div class="flex items-center justify-between p-4">
+                <div>
+                    <h3 class="text-xl font-semibold">{{ selected.title }}</h3>
+                    <div class="text-sm text-gray-600 dark:text-gray-300">{{ selected.location }}</div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="{{ selected.src }}" target="_blank"
+                        class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded">Open Image</a>
+                    <button (click)="close()" class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700">Close</button>
+                </div>
+            </div>
+            <img [src]="selected.src" [alt]="selected.title" class="w-full max-h-[75vh] object-contain bg-black" />
+            <div class="p-4 flex gap-2 flex-wrap">
+                <span *ngFor="let t of selected.tags" class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">{{ t
+                    }}</span>
+            </div>
+        </div>
+    </div>
+</section>
