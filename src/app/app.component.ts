@@ -14,24 +14,14 @@ export class AppComponent {
 
   playlist = [
     {
-      title: 'Mere Sapno Ki Rani',
-      artist: 'Kishore Kumar',
-      url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+      title: 'Jaa Bewafa Jaa',
+      artist: ' Altaf Raja',
+      url: '/music/Ja Bewafa Ja Tuje Pyar Nahi Karna.mp3',
     },
     {
-      title: 'Tujhe Dekha Toh',
-      artist: 'Kumar Sanu',
-      url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-    },
-    {
-      title: 'Kala Chashma',
-      artist: 'Badshah & Neha Kakkar',
-      url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
-    },
-    {
-      title: 'Dil Se Re',
-      artist: 'A. R. Rahman',
-      url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
+      title: 'Pehle To Kabhi Kabhi Gham Tha',
+      artist: ' Altaf Raja',
+      url: '/music/Pehle To Kabhi Kabhi Gham Tha.mp3',
     },
   ];
 
