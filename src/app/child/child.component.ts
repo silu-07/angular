@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { TailwindComponent } from "../tailwind/tailwind.component";
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-child',
-  imports: [TailwindComponent],
+  imports: [ CommonModule, FormsModule],
   templateUrl: './child.component.html',
   styleUrl: './child.component.scss',
+  standalone: true
 })
 export class ChildComponent {
+
 
 }
